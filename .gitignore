@@ -1,6 +1,9 @@
 .DS_Store
 *.pyc
+*.pyo
+__pycache__/
 *.egg-info
 *.swp
+*.log
 tags
 purchase_request_workflow/docs/current

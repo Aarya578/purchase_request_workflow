@@ -1,0 +1,223 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PR.00001",
+ "creation": "2026-10-27 11:54:47.745970",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "title",
+  "requester",
+  "department",
+  "cost_centre",
+  "required_by",
+  "justification",
+  "sb_selection",
+  "items",
+  "estimated_total",
+  "sb_approval",
+  "approver",
+  "decision_comment",
+  "sb_order",
+  "supplier",
+  "supplier_reference",
+  "order_date",
+  "expected_delivery_date",
+  "ordered_by",
+  "amended_from",
+  "sb_receipts",
+  "receipt_logs"
+ ],
+ "fields": [
+  {
+   "default": "PR-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "PR-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "default": "__user",
+   "fieldname": "requester",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Requester",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cost_centre",
+   "fieldtype": "Data",
+   "label": "Cost Centre"
+  },
+  {
+   "fieldname": "required_by",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Required by date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "justification",
+   "fieldtype": "Small Text",
+   "label": "Business justification",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sb_selection",
+   "fieldtype": "Section Break",
+   "label": "Item selection"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Purchase Request Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "estimated_total",
+   "fieldtype": "Currency",
+   "label": "Estimated total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_approval",
+   "fieldtype": "Section Break",
+   "label": "Approval details"
+  },
+  {
+   "fieldname": "approver",
+   "fieldtype": "Link",
+   "label": "Approver",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "decision_comment",
+   "fieldtype": "Small Text",
+   "label": "Decision Comment"
+  },
+  {
+   "fieldname": "sb_order",
+   "fieldtype": "Section Break",
+   "label": "Order Details"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Data",
+   "label": "Supplier"
+  },
+  {
+   "fieldname": "supplier_reference",
+   "fieldtype": "Data",
+   "label": "Supplier Reference"
+  },
+  {
+   "fieldname": "order_date",
+   "fieldtype": "Date",
+   "label": "Order Date"
+  },
+  {
+   "fieldname": "expected_delivery_date",
+   "fieldtype": "Date",
+   "label": "Expected Delivery Date"
+  },
+  {
+   "fieldname": "ordered_by",
+   "fieldtype": "Link",
+   "label": "Ordered By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "Purchase Request",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_receipts",
+   "fieldtype": "Section Break",
+   "label": "Receipt Tracking"
+  },
+  {
+   "fieldname": "receipt_logs",
+   "fieldtype": "Table",
+   "label": "Receipt Logs",
+   "options": "Purchase Receipt Log"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-10-27 16:22:12.422470",
+ "modified_by": "Administrator",
+ "module": "Purchase Request Workflow",
+ "name": "Purchase Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Purchase Requester",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Purchase Approver",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Purchase Officer",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
