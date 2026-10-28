@@ -248,3 +248,5 @@ bench --site <site-name> clear-cache
 
 ## License
 MIT License. Created for the Frappe Framework Intern Development Project.
+
+<!-- Harmless training edit for D1-T05 Git workflow verification -->
